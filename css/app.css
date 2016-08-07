@@ -274,3 +274,28 @@ Column Items with Description
     height: auto;
     padding: 5px;
 }
+
+
+/*=============================================================
+
+Custom Styling
+
+=============================================================*/
+
+#body-wrapper {
+    height: 100%;
+}
+
+
+/*=============================================================
+
+Header Styling
+
+=============================================================*/
+
+#header-container {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #293646;
+}
