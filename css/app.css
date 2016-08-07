@@ -561,3 +561,63 @@ Header Navigation
     background: #293646;
     position: relative;
 }
+
+#offcanvas .navigation {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+#offcanvas .navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+#offcanvas .navigation a {
+    text-decoration: none;
+    color: #434A54;
+    font-weight: 500;
+}
+
+#offcanvas .navigation .has-submenu {
+    position: relative;
+}
+
+#offcanvas .navigation .has-submenu ul li {
+    opacity: 0;
+}
+
+#offcanvas .navigation .has-submenu > a:after {
+    content: "\f123";
+    font-family: "Ionicons";
+    margin-left: 4px;
+    color: #CCD1D9;
+}
+
+#offcanvas .navigation ul ul {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #AAB2BD;
+    width: 150px;
+    overflow: hidden;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+#offcanvas .navigation .has-submenu ul li a {
+    padding: 8px 12px;
+    display: block;
+}
+
+#offcanvas .navigation .has-submenu ul li a:hover {
+    background-color: #fafafa;
+}
+
+#offcanvas .navigation > ul > li {
+    float: left;
+    display: inline-block;
+    margin-right: 15px;
+}
