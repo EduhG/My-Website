@@ -279,6 +279,22 @@ Column Items with Description
     padding: 5px;
 }
 
+.vertical-align-content {
+    display: flex;
+    justify-content: center;
+    /*    align-items: center;*/
+    color: #fff;
+    flex-direction: column;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
 
 /*=============================================================
 
@@ -331,17 +347,22 @@ Header Navigation
     position: relative;
 }
 
+.nav-menu {
+    text-align: right
+}
+
 .navigation {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 12px;
     text-transform: uppercase;
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: transparent;
+    height: 100%;
 }
 
 .navigation a {
     text-decoration: none;
-    color: #434A54;
+    color: #fff;
     font-weight: 500;
 }
 
@@ -351,11 +372,12 @@ Header Navigation
 
 #pointer {
     position: absolute;
-    top: 16px;
-    left: 60px;
+    top: 0%;
+    right: 65px;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 13px;
     color: #6c6f73;
+    height: 100%;
 }
 
 #pointer:before {
