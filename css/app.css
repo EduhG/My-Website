@@ -500,7 +500,7 @@ Header Navigation
     position: absolute;
     bottom: 0px;
     height: 80px;
-    background: red;
+    background: transparent;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -508,8 +508,8 @@ Header Navigation
 
 .scroller .text {
     display: block;
-    margin: 10px 10px;
-    color: #6c6f73;
+    margin: 4px 10px;
+    color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", Arial, sans-serif;
 }
@@ -534,15 +534,15 @@ Header Navigation
     display: block;
     margin-right: 5px;
     text-align: center;
-    width: 120px;
+    width: 150px;
     position: absolute;
     left: 50%;
     margin-left: -60px;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .scroller .down {
-    top: 10px;
+    top: 0px;
     margin-top: 0px;
 }
 
@@ -554,4 +554,10 @@ Header Navigation
 .scroller .ion {
     background-color: #fff;
     box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+#container {
+    height: 100vh;
+    background: #293646;
+    position: relative;
 }
