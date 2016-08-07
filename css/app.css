@@ -298,4 +298,8 @@ Header Styling
     width: 100vw;
     overflow-x: hidden;
     background-color: #293646;
+    background-image: url(../images/header-bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
