@@ -11,7 +11,18 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body>
+<body onload="loaded()">
+    <div id="body-wrapper">
+        <div id="scroller">
+            <div style="height: 1000px; background: red">
+
+            </div>
+            <div style="height: 1000px; background: red">
+
+            </div>
+        </div>
+    </div>
+
     <div id="body-wrapper" class="row">
         <header id="header-container" class="header-container">
             <div class="row header-nav">
@@ -102,9 +113,15 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
+    <script src="js/scrolling/iscroll.js"></script>
+
     <script src="js/velocity/velocity.min.js"></script>
     <script src="js/velocity/velocity.ui.min.js"></script>
     <script src="js/app.js"></script>
+
+    <script type="text/javascript">
+        //        var myScroll; // // function loaded() { // myScroll = new IScroll('#body-wrapper', { // scrollbars: true, // mouseWheel: true, // interactiveScrollbars: true, // shrinkScrollbars: 'scale', // fadeScrollbars: true // }); // } // // document.addEventListener('touchmove', function (e) { // e.preventDefault(); // }, false);
+    </script>
 </body>
 
 </html>

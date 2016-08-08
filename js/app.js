@@ -171,23 +171,22 @@ $menu.on('click', function () {
     }
 });
 
-var scrollbarTimeout;
-var $body = $('body');
-
-$body.scroll(function () {
-    console.log('scrolling');
-    //    $body.css("overflow", "auto");
-    //    clearTimeout(scrollbarTimeout);
-    //    scrollbarTimeout = setTimeout(function () {
-    //        // Your function here
-    //        $body.css("overflow", "hidden");
-    //    }, 500);
+$('body').on('load', function () {
+    alert();
 });
 
-$body.on('scroll', function (e) {
-    if ($body.hasClass('.scrolling')) {
-        $body.removeClass('.scrolling');
-    } else {
-        $body.addClass('.scrolling');
-    }
+$(function () {
+    var myScroll;
+
+    myScroll = new IScroll('#body-wrapper', {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+    });
+
+    document.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+    }, false);
 });
