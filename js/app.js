@@ -175,10 +175,11 @@ $('body').on('load', function () {
     alert();
 });
 
-$(function () {
+/*$(function () {
     var myScroll;
 
     myScroll = new IScroll('#body-wrapper', {
+        probeType: 3,
         scrollbars: true,
         mouseWheel: true,
         interactiveScrollbars: true,
@@ -186,7 +187,20 @@ $(function () {
         fadeScrollbars: true
     });
 
+    myScroll.on('scroll', function () {
+        console.log('dsdsdsds');
+    });
+
     document.addEventListener('touchmove', function (e) {
         e.preventDefault();
     }, false);
-});
+
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        console.log('dsdsdsds');
+        if (scroll > 60) {
+            console.log('dsdsdsds');
+        }
+    });
+
+});*/

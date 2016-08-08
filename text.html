@@ -30,7 +30,10 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
-    <script type="text/javascript" src="js/scrolling/iscroll.js"></script>
+    <script type="text/javascript" src="js/scrolling/iscroll-probe.js"></script>
+
+    <script src="js/velocity/velocity.min.js"></script>
+    <script src="js/velocity/velocity.ui.min.js"></script>
 
     <script src="js/velocity/velocity.min.js"></script>
     <script src="js/velocity/velocity.ui.min.js"></script>
@@ -40,15 +43,43 @@
 
     <script type="text/javascript">
         var myScroll;
+        var $header = $('.header');
+
+        var hasAnimated = false;
+        var hasAnimated1 = false;
+        var hasAnimated2 = false;
+        var count = 0;
+
+        function updatePosition() {
+            if ((myScroll.y * -1) < 200 && (myScroll.y * -1) > 60 && count === 0) {
+                hasAnimated = false;
+            } else {
+                hasAnimated = true;
+                count += 1;
+            }
+
+            if (hasAnimated === false) {
+                console.log(myScroll.y * -1);
+                console.log(hasAnimated);
+
+                $header.velocity("transition.whirlIn");
+                hasAnimated = true;
+            }
+
+            /*if ((myScroll.y * -1) > 60) { $header.css('background', 'blue'); if (hasAnimated1 === false) { $header.velocity("transition.slideLeftBigIn"); if ((myScroll.y * -1) < 1) { hasAnimated1=f alse } else { hasAnimated1=t rue } } } else { $header.css( 'background', 'red'); if (hasAnimated2===f alse) { $header.velocity( "transition.whirlIn"); hasAnimated2=t rue } }*/
+        }
 
         function loaded() {
             myScroll = new IScroll('#wrapper', {
+                probeType: 3,
                 scrollbars: true,
                 mouseWheel: true,
                 interactiveScrollbars: true,
                 shrinkScrollbars: 'scale',
                 fadeScrollbars: true
             });
+
+            myScroll.on('scroll', updatePosition);
         }
 
         document.addEventListener('touchmove', function (e) {
