@@ -16,7 +16,7 @@ var offCanvasIn = [{
     e: $("#top-nav"),
     p: {
         translateX: "-10px",
-        opacity: 0
+        opacity: [1, 0]
     },
     o: {
         duration: 300
@@ -168,5 +168,26 @@ $menu.on('click', function () {
     } else {
         $subMenu.removeClass('on-view');
         $subMenu.add($subMenuItem).velocity('reverse');
+    }
+});
+
+var scrollbarTimeout;
+var $body = $('body');
+
+$body.scroll(function () {
+    console.log('scrolling');
+    //    $body.css("overflow", "auto");
+    //    clearTimeout(scrollbarTimeout);
+    //    scrollbarTimeout = setTimeout(function () {
+    //        // Your function here
+    //        $body.css("overflow", "hidden");
+    //    }, 500);
+});
+
+$body.on('scroll', function (e) {
+    if ($body.hasClass('.scrolling')) {
+        $body.removeClass('.scrolling');
+    } else {
+        $body.addClass('.scrolling');
     }
 });
