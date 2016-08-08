@@ -12,12 +12,89 @@
 </head>
 
 <body onload="loaded()">
+    <!--
     <div class="header">
-        ghhgh
-    </div>
+    ghhgh
+</div>
+-->
 
     <div id="wrapper">
         <div id="scroller">
+            <header id="header-container" class="header-container">
+                <div class="row header-nav">
+                    <div class="col-5 col-m-5 col-s-5 logo vertical-align-content">
+                        <span class="sm-logo">E.N</span>
+                        <span class="bg-logo">EN</span>
+                    </div>
+
+                    <div class="col-7 col-m-7 col-s-7 nav-menu">
+                        <nav class="navigation vertical-align-content">
+                            <a id="open" href="#"><span class="ion ion-navicon"></span></a>
+                        </nav>
+                        <div id="pointer" class="vertical-align-content">
+                            <span>About Me <i class="ion ion-arrow-right-c"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="offcanvas">
+                    <a href="#" id="close" class="ion ion-close"></a>
+
+                    <div id="top-nav" class="widget">
+                        <nav class="navigation">
+                            <ul class="cf">
+                                <li><a href="#">Home</a></li>
+                                <li class="has-submenu">
+                                    <a href="#">Services</a>
+                                    <ul style="background: #fff">
+                                        <li><a href="#">Web Design</a></li>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Icon Design</a></li>
+                                        <li><a href="#">Illustration</a></li>
+                                        <li><a href="#">Typography</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div id="about" class="widget">
+                        <h3>About Me</h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, non unde eveniet. Molestiae at nisi facilis, sed excepturi fugiat reiciendis earum, id tempora quis doloribus quod, omnis eveniet architecto animi.</p>
+                    </div>
+                    <div id="images" class="widget image">
+                        <h3>Images</h3>
+                        <ul>
+                            <li><img src="http://lorempixel.com/50/50/cats/1/" alt="" /></li>
+                            <li><img src="http://lorempixel.com/50/50/cats/2/" alt="" /></li>
+                            <li><img src="http://lorempixel.com/50/50/cats/3/" alt="" /></li>
+                            <li><img src="http://lorempixel.com/50/50/cats/4/" alt="" /></li>
+                            <li><img src="http://lorempixel.com/50/50/cats/5/" alt="" /></li>
+                            <li><img src="http://lorempixel.com/50/50/cats/6/" alt="" /></li>
+                            <li><img src="http://lorempixel.com/50/50/cats/7/" alt="" /></li>
+                            <li><img src="http://lorempixel.com/50/50/cats/8/" alt="" /></li>
+                        </ul>
+                    </div>
+                    <div id="follow" class="widget follow">
+                        <h3>Follow</h3>
+                        <ul>
+                            <li><a href="#" class="ion ion-social-facebook">Facebook</a></li>
+                            <li><a href="#" class="ion ion-social-twitter">Twitter</a></li>
+                            <li><a href="#" class="ion ion-social-instagram">Instagram</a></li>
+                            <li><a href="#" class="ion ion-social-dribbble-outline">Dribbble</a></li>
+                            <li><a href="#" class="ion ion-social-github">Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="scroller">
+                    <a href="#" class="icon down" id="go-down">
+                        <span class="text">My Portfolio</span>
+                        <span class="ion ion-ios-arrow-down scroll-icn"></span>
+                    </a>
+                </div>
+            </header>
             <div style="height: 100vh; background: #293646; position: relative">
 
             </div>
@@ -43,19 +120,17 @@
 
     <script type="text/javascript">
         var myScroll;
-        var $header = $('.header');
+        var $header = $('.header-nav');
 
         var hasAnimated = false;
         var hasAnimated1 = false;
         var hasAnimated2 = false;
-        var count = 0;
 
         function updatePosition() {
-            if ((myScroll.y * -1) < 200 && (myScroll.y * -1) > 60 && count === 0) {
+            if ((myScroll.y * -1) < 200 && (myScroll.y * -1) > 98) {
                 hasAnimated = false;
             } else {
                 hasAnimated = true;
-                count += 1;
             }
 
             if (hasAnimated === false) {
@@ -65,8 +140,6 @@
                 $header.velocity("transition.whirlIn");
                 hasAnimated = true;
             }
-
-            /*if ((myScroll.y * -1) > 60) { $header.css('background', 'blue'); if (hasAnimated1 === false) { $header.velocity("transition.slideLeftBigIn"); if ((myScroll.y * -1) < 1) { hasAnimated1=f alse } else { hasAnimated1=t rue } } } else { $header.css( 'background', 'red'); if (hasAnimated2===f alse) { $header.velocity( "transition.whirlIn"); hasAnimated2=t rue } }*/
         }
 
         function loaded() {
