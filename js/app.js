@@ -124,6 +124,12 @@ $("#close").on('click', function (event) {
     $.Velocity.RunSequence(offCanvasOut);
 });
 
+$("#wrapper").on('click', function (event) {
+    event.preventDefault();
+    console.log('header clicked');
+});
+
+
 var $icon = $(".scroll-icn");
 var $down = $("#go-down");
 var $up = $("#go-up");
